@@ -1,0 +1,304 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+/*hero-section*/
+.hero-section {
+    background-color: #4975DB;
+    color: #fff;
+    padding: 80px 0 120px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    transform: skewY(-3deg);
+    transform-origin: bottom left;
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section .breadcrumb-nav {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-section .breadcrumb-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.hero-section .breadcrumb-nav a:hover {
+    color: #fff;
+}
+
+.hero-section .breadcrumb-nav .breadcrumb-separator {
+    margin: 0 8px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+ /* Menu Section Specific Styles */
+            /* Menu Section Specific Styles */
+        .menu-category-section {
+            padding: 3rem; /* Increased padding for more space around content */
+            background-color: #fff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 2.5rem;
+        }
+
+        .menu-category-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4975DB;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem; /* Increased space between menu items */
+            padding-bottom: 2rem; /* Increased padding for separator */
+            border-bottom: 1px dashed #e0e0e0;
+            position: relative; /* Needed for absolute positioning of icons */
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .menu-item-image {
+            width: 120px; /* Slightly larger image */
+            height: 120px; /* Slightly larger image */
+            border-radius: 0.75rem; /* More rounded corners for image */
+            object-fit: cover;
+            margin-right: 2rem; /* Increased space from image to details */
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15); /* More prominent shadow */
+        }
+
+        .menu-item-details {
+            flex-grow: 1; /* Allows details to take up available space */
+            padding-right: 1rem; /* Add some padding to prevent text from touching price/icons */
+        }
+
+        .menu-item-details h3 {
+            font-size: 1.6rem; /* Slightly larger title */
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem; /* Increased space below title */
+        }
+
+        .menu-item-details p {
+            font-size: 1rem; /* Slightly larger description text */
+            color: #6c757d;
+            line-height: 1.5; /* Improved line height for readability */
+            margin-bottom: 0.75rem; /* Increased space below description */
+        }
+
+        .menu-item-price {
+            font-size: 1.6rem; /* Slightly larger price */
+            font-weight: bold;
+            color: #4975DB;
+            margin-left: auto; 
+            margin-right: 3rem; 
+            margin-top: 60px;
+            flex-shrink: 0; 
+        }
+
+        .item-icons {
+            position: absolute;
+            top: 0.5rem; /* Position from the top of the menu-item */
+            right: 1.5rem; /* Position from the right of the menu-item */
+            display: flex;
+            gap: 0.5rem; /* Space between the two icon buttons */
+            z-index: 10; /* Ensure icons are on top of other content */
+        }
+
+        .icon-btn { /* New class for the icon buttons */
+            background-color: transparent; /* Transparent background */
+            border: 1px solid #e0e0e0; /* Subtle border */
+            border-radius: 0.3rem; /* Rounded corners */
+            padding: 0.4rem 0.6rem; /* Small padding */
+            cursor: pointer;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+            display: flex; /* To center icon inside button */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-btn:hover {
+            background-color: #f0f0f0; /* Light background on hover */
+            border-color: #BFD5F4; /* Light blue border on hover */
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+
+        .icon-btn .fas { /* Styling for the Font Awesome icons inside buttons */
+            color: #6c757d; /* Default gray color for icons */
+            font-size: 1.1rem; /* Icon size */
+            transition: color 0.2s ease;
+        }
+
+        .icon-btn:hover .fas {
+            color: #4975DB; /* Primary blue on hover */
+        }
+  
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1rem;
+  }
+
+  .hero-section .btn-primary {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .hero-image-container::before,
+  .hero-image-container::after {
+    display: none;
+  }
+}
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) { /* Medium devices and down */
+            .hero-section {
+                padding: 4rem 0 6rem;
+            }
+            .hero-section h1 {
+                font-size: 3rem;
+            }
+            .hero-section::after {
+                height: 80px;
+            }
+            .navbar-collapse {
+                text-align: center;
+            }
+            .nav-link {
+                margin-left: 0;
+                margin-bottom: 0.625rem;
+            }
+            .menu-item {
+                flex-direction: column; 
+                text-align: center;
+                padding: 1.5rem; 
+                margin-bottom: 1.5rem; 
+            }
+            .menu-item-image {
+                margin-right: 0;
+                margin-bottom: 1.25rem; 
+                width: 100px; 
+                height: 100px; 
+            }
+            .menu-item-details {
+                padding-right: 0; 
+            }
+            .menu-item-details h3 {
+                margin-bottom: 0.25rem; 
+            }
+            .menu-item-details p {
+                margin-bottom: 0.75rem; 
+            }
+            .menu-item-price {
+                margin-left: 0; 
+                margin-right: 0; 
+                margin-top: 0.75rem; 
+                margin-bottom: 0.5rem; 
+            }
+            .item-icons {
+                position: relative; /* Make icons flow with content on small screens */
+                top: auto;
+                right: auto;
+                width: 100%; 
+                justify-content: center; 
+                margin-top: 1rem; 
+                margin-bottom: 0.5rem; 
+            }
+            .menu-item-wishlist, .menu-item-basket {
+                margin: 0 0.5rem; 
+            }
+        }
+
+        @media (max-width: 767.98px) { /* Small devices and down */
+            .hero-section {
+                padding: 3rem 0 5rem;
+            }
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            .hero-section .breadcrumb-nav {
+                font-size: 0.8rem;
+            }
+            .hero-section::after {
+                height: 60px;
+                transform: skewY(-2deg);
+            }
+            .menu-category-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 575.98px) { /* Extra small devices */
+            .hero-section {
+                padding: 2.5rem 0 4rem;
+            }
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            .hero-section::after {
+                height: 40px;
+                transform: skewY(-1.5deg);
+            }
+            .menu-category-section h2 {
+                font-size: 1.8rem;
+            }
+            .menu-item-details h3 {
+                font-size: 1.3rem;
+            }
+            .menu-item-details p {
+                font-size: 0.85rem;
+            }
+            .menu-item-price {
+                font-size: 1.2rem;
+            }
+            .item-icons {
+                flex-wrap: wrap; /* Allow icons to wrap if space is too tight */
+                justify-content: center;
+            }
+            .menu-item-price, .menu-item-wishlist, .menu-item-basket {
+                margin-bottom: 0.5rem; /* Add some vertical spacing if they wrap */
+            }
+        }
